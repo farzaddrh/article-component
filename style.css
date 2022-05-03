@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+}
+.section-article {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+}
+.card {
+  max-width: 80rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.article {
+  padding: 3rem;
+  flex: 0 1 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+.article-heading {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  font-size: 2.6rem;
+}
+.article-description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: hsl(212, 23%, 69%);
+}
+.photo {
+  flex: 0 1 30rem;
+  align-self: stretch;
+  border-radius: 1rem 0 0 1rem;
+
+  background-image: url("/images/drawers.jpg");
+  background-size: cover;
+  /* background-position: right top; */
+}
+.article-person {
+  display: flex;
+}
+
+.profile {
+  display: flex;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+.michelle {
+  display: block;
+  border-radius: 50%;
+  width: 25%;
+}
+.agent {
+  align-self: center;
+  font-size: 1.5rem;
+}
+.agent-name {
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 1rem;
+}
+.agent-date {
+  color: hsl(212, 23%, 69%);
+}
+.share {
+  align-self: center;
+  position: relative;
+}
+.share-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+  padding: 2rem 4rem;
+  position: relative;
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  gap: 2.5rem;
+}
+.share-icons:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* margin-left: -50px; */
+  width: 0;
+  height: 0;
+  border-top: solid 10px hsl(217, 19%, 35%);
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+.share-icon {
+  background-color: hsl(210, 46%, 95%);
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  box-shadow: 0px -1px 5px -2px rgba(0, 0, 0, 0.43);
+  padding: 1rem;
+  background-image: url("/images/icon-share.svg");
+  background-position: center center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.share-icons p {
+  font-size: 1.5rem;
+  color: hsl(210, 46%, 95%);
+  letter-spacing: 4px;
+}
+.share-icons-container {
+  position: absolute;
+  left: -13rem;
+  top: -8rem;
+}
+.hidden {
+  display: none;
+}
+.active {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+@media (max-width: 950px) {
+  .card {
+    flex-direction: column;
+    max-width: 40rem;
+  }
+  .article {
+    flex-basis: 17rem;
+  }
+  .photo {
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    max-width: 34rem;
+  }
+  .article-heading {
+    font-size: 1.8rem;
+  }
+  .share-icons-container {
+    position: absolute;
+    left: -30rem;
+    top: -2rem;
+    width: 32rem;
+    z-index: 500;
+  }
+  .photo {
+    flex: 0 1 20rem;
+    align-self: stretch;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .article-description {
+    font-size: 1.2rem;
+  }
+  .agent-date,
+  .agent-name {
+    font-size: 1.2rem;
+  }
+}
+.share-icon-abosolue {
+  position: absolute;
+  z-index: 1000;
+  left: -1.3rem;
+  top: -4px;
+}
